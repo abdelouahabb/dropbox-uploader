@@ -12,7 +12,7 @@ urls = [
     ("/", handlers.RootHandler),
     (r"/upload", handlers.Upload),
     (r"/thanks", handlers.Thanks),
-    (r"/(.*)", tornado.web.StaticFileHandler, {"path":r"{0}".format(os.path.dirname(__file__))}),
+    (r"/(.*)", tornado.web.StaticFileHandler, {"path":r"{0}".format(os.path.join(os.path.dirname(__file__),"static"))}),
 ]
 
 settings = dict({
